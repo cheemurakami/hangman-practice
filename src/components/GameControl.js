@@ -2,6 +2,7 @@ import React from 'react'
 // import WordList from './WordList'
 import { connect } from 'react-redux';
 import PropTypes from "prop-types";
+import Keyboard from "./Keyboard";
 
 
 function GameControl(props) {
@@ -18,6 +19,7 @@ function GameControl(props) {
     <React.Fragment>
       {props.currentWord && props.currentWord.word}
       <button onClick = {handleClick}>start</button>
+      <Keyboard />
     </React.Fragment>
   )
 }
