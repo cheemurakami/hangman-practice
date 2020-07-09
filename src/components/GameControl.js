@@ -1,5 +1,5 @@
 import React from 'react'
-// import WordList from './WordList'
+import Answer from './Answer'
 import { connect } from 'react-redux';
 import PropTypes from "prop-types";
 import Keyboard from "./Keyboard";
@@ -9,7 +9,7 @@ function GameControl(props) {
 
   const handleClick = () => {
     const { dispatch } = props;
-    console.log(props)
+    //console.log(props)
     const action = {
       type: "START_GAME"
     }
@@ -17,7 +17,8 @@ function GameControl(props) {
   }
   return (
     <React.Fragment>
-      {props.currentWord && props.currentWord.word}
+      {props.currentWord && <Answer answerWord = {props.currentWord.word}/> }
+
       <button onClick = {handleClick}>start</button>
       <Keyboard />
     </React.Fragment>
@@ -25,7 +26,7 @@ function GameControl(props) {
 }
 
 const mapStateToProps = state => {
-  console.log(state)
+  //console.log(state)
   return {
     currentWord: state.currentWord //{word:'kiwi', hint:'cat'}
   }

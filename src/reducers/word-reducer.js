@@ -9,13 +9,13 @@ export default (state = {}, action) => {
 
 const randomWord = () => {
   const wordList = [
-    {word: 'kiwi',
+    {word: ['k','i','w','i'],
      hint: 'cat'
     },
-    {word: 'bee',
+    {word: ['b','e','e'],
      hint: 'handsome'
     },
-    {word: 'chee',
+    {word: ['c','h','e','e'],
      hint: 'keyboard'
     }
   ];

@@ -19,3 +19,7 @@ code {
   padding: 5px;
   border-style: solid;
 }
+
+.underscore{
+  display: inline-block;
+}
