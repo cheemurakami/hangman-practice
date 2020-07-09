@@ -3,8 +3,12 @@ import PropTypes from "prop-types";
 
 
 function Key(props) {
+  const letterClick = () => {
+    console.log(`${props.letter} is clicked`)
+  }
+
   return (
-    <button className='key'>
+    <button onClick={letterClick} className='key'>
       {props.letter}
     </button>
   )
