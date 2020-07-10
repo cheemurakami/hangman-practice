@@ -7,4 +7,9 @@ describe ("game actions", () => {
       {type: c.START_GAME}
     )
   })
+  it ('addCount should create ADD_COUNT action', () => {
+    expect(a.addCount()).toEqual(
+      {type: c.ADD_COUNT}
+    )
+  })
 })

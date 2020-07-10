@@ -5,7 +5,7 @@ export default (state = {counter: 0}, action) => {
   case c.START_GAME:
     return {currentWord: randomWord(), counter: 0};
   case c.ADD_COUNT:
-    return {counter: state.counter + 1}
+    return {currentWord: state.currentWord, counter: state.counter + 1}
   default:
     return state;
   };
