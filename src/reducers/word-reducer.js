@@ -1,13 +1,16 @@
 import * as c from './../actions/ActionTypes';
 
-export default (state = {}, action) => {
+export default (state = {counter: 0}, action) => {
   switch (action.type){
   case c.START_GAME:
-    return {currentWord: randomWord()};
+    return {currentWord: randomWord(), counter: 0};
+  case c.ADD_COUNT:
+    return {counter: state.counter + 1}
   default:
     return state;
   };
 };
+
 
 const randomWord = () => {
   const wordList = [
@@ -24,3 +27,4 @@ const randomWord = () => {
   const word = wordList[Math.floor(Math.random() * wordList.length)]
   return word;
 }
+

@@ -1,10 +1,14 @@
 import React from 'react'
 import PropTypes from "prop-types";
+import { connect } from 'react-redux';
+import * as a from './../actions';
 
 
 function Key(props) {
   const letterClick = () => {
-    console.log(`${props.letter} is clicked`)
+    const { dispatch } = props;
+    const action = a.addCount();
+    dispatch(action);
   }
 
   return (
@@ -17,4 +21,8 @@ function Key(props) {
 Key.propTypes = {
   letter: PropTypes.string
 }
+
+
+
+Key = connect()(Key);
 export default Key
